@@ -1,16 +1,4 @@
-# 微前端架构模板
 
-## 介绍
-
-> 微前端是一种类似于微服务的架构，它将微服务的理念应用于浏览器端，即将单页面前端应用由单一的单体应用转变为多个小型前端应用聚合为一的应用。各个前端应用还可以独立开发、独立部署。同时，它们也可以在共享组件的同时进行并行开发——这些组件可以通过 NPM 或者 Git Tag、Git Submodule 来管理。
-
-本项目是基于 `qiankun` 搭建的微前端架构 `Demo`，你也可以当成 `qiankun-quick-start` 来使用。
-
-本项目使用 `Vue` 作为主应用基座，嵌入了 `Vue、React、Angular、Jquery...` 等等多个技术栈的微应用，架构图和效果图如下：
-
-![架构图](http://shadows-mall.oss-cn-shenzhen.aliyuncs.com/images/blogs/qiankun_practice/8.png)
-
-![效果图](http://shadows-mall.oss-cn-shenzhen.aliyuncs.com/images/blogs/qiankun_practice/42.png)
 
 ## 如何运行
 
@@ -27,40 +15,3 @@ yarn install
 yarn examples:install
 yarn examples:start
 ```
-
-## 系列教程
-
-本系列配套教程：
-
-- [基于 qiankun 的微前端最佳实践（万字长文） - 从 0 到 1 篇](https://github.com/a1029563229/Blogs/tree/master/BestPractices/qiankun/Start.md)
-- [基于 qiankun 的微前端最佳实践（图文并茂） - 应用部署篇](https://github.com/a1029563229/Blogs/tree/master/BestPractices/qiankun/Deploy.md)
-- [基于 qiankun 的微前端最佳实践（图文并茂） - 应用间通信篇](https://github.com/a1029563229/Blogs/tree/master/BestPractices/qiankun/Communication.md)
-- [万字长文+图文并茂+全面解析微前端框架 qiankun 源码 - qiankun 篇](https://github.com/a1029563229/Blogs/tree/master/Source-Code/qiankun/1.md)
-
-本系列其他文章计划一到两个月内完成，点个 `Star` 不迷路。
-
-计划如下：
-
- - 生命周期篇；
- - IE 兼容篇；
- - 性能优化、缓存方案篇；
-
-## 分支说明
-
-`master` 为稳定分支，其他分支根据 [qiankun 实战系列教程](https://github.com/a1029563229/blogs) 划分：
-
-  - `master`：稳定分支，可以直接作为 `qiankun-quick-start` 使用；
-  - `feature-inject-sub-apps`：主应用基座搭建、微应用接入方案；
-  - `feature-deploy`：应用部署发布方案；
-  - `feature-communication`：官方通信方案；
-  - `feature-communication-shared`：`Shared` 通信方案；
-
-大家可以根据自己的需求切换分支。
-
-## 关于跨域
-
-由于 `qiankun` 内部使用的是 `Fetch HTML` 的方式加载子应用，所以会遇到跨域问题。我们需要先解决跨域问题，使我们的主应用可以正常加载子应用相关资源。
-
-在开发环境下，本项目配置了跨域解决方案，所以在直接运行项目并不会遇到跨域问题。
-
-生产环境的跨域问题可以参考 `应用部署篇` 的方案。
